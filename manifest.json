@@ -1,0 +1,31 @@
+{
+   "author": "Jesse Morris",
+   "background": {
+      "persistent": true,
+      "scripts": [ "background/background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "vendor/jquery/jquery-3.2.1.js", "content/fd/content.js" ],
+      "matches": [ "*://portal.fastdevice.net/*" ]
+   }, {
+      "exclude_matches": [ "*://portal.fastdevice.net/*" ],
+      "js": [ "vendor/jquery/jquery-3.2.1.js", "lib/walker.js", "lib/c2canchor.js", "lib/numberPatterns.js", "content/all/content.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "description": "Enables click to call for numbers on the web.",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png"
+   },
+   "options_ui": {
+       "page": "content/fd/options.html",
+       "open_in_tab": false
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq7ij3VG3PMz0JGlkQPw3WFOqQKPvm6Qc+cahMg9IY389yJ3/TXPJFcEotybJZUHll/9dwqNbd+cN4nwJvWemGvGppMfWd+LJyY/5VvQ0hnNUD/OCFQB/TSTfGsdryaEkWzWjdCqCO8Owdwx/6PVqkKXUIj0GTBIYN0rwCP7lRdQga7J4lkKJonPqD0vUxA69cwmrY9vF65pzVXvs0h7qTHPKRiF5DCDiKAq2VDtb9r/cAm8E8WBfdWPhrSx1ZLqU1kh6qngt9UFpouJbtiOfKsIxl/j4Lzjl+VeNJAVcipxgpdnzZ0Rjg3shZFU70g4TI0qCtbgWz8HlneMqqU85iwIDAQAB",
+   "manifest_version": 2,
+   "name": "FASTDEVICE Click2Call",
+   "permissions": [ "activeTab", "tabs", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.2"
+}
